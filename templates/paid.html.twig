@@ -1,0 +1,5 @@
+{% if userIsAllow %}
+    <p>Your order has been placed. You can rent the boat  {{ loc.Name }} during the period of {{ loc.DateDebutLoc }} au {{ loc.DateFinLoc }}</p> 
+{% else %}
+    <p>You are not authorized to view this page.</p>
+{% endif %}

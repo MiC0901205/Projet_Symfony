@@ -1,0 +1,47 @@
+<head>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <div class="menu">
+        <form action="?search" method="post">
+            <div class="infosBoat">
+                <div class="NomBoat">                    
+                    <label for="Name"><b>Boat Name : </b></label>
+                    <input type="text" placeholder="The name of the boat" name="nameBoat">
+                </div>
+
+                <div class="PrixMini" style="margin-left: 40px;">
+                    <label for="Min_price"><b></b>Minimum price : </label>
+                    <input type="number" step="100" name="min_price" >
+                </div>
+
+                <div class="PrixMaxi" style="margin-left: 40px;">
+                    <label for="Maxi_price"><b></b>Maximum price : </label>
+                    <input type="number" step="100" name="max_price">
+                </div>
+
+                <div class="type" style="margin-left: 40px;">
+                <select name="typeBoat">
+                {% for type in types %}
+                    <option value="{{ type.id }}">{{ type.label }}</option>
+                {% endfor %} 
+                </select>          
+                </div>
+                <button type="submit" name="search" class="btn btn-primary search">Search</button>
+            </div>   
+        </form>
+    </div>
+    <div class="body">
+        <div class="desc">
+            <h2>Description</h2>
+            <p>This site is a project that allows users to rent boats over a period of time that they have selected. Several types of boats are available and remain at your disposal. I wish you a good discovery in the world of boats that surround us.</p>
+        </div>
+        <div class="infosSupp">
+            <p>Learn more about tips to improve your life on a boat</p>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JFdyhIq1rcA?&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+        </div>
+    </div>
+    <div id ="copyrighttext">
+        Copyright ©, Tout droit réservés !
+    </div>
+</body>

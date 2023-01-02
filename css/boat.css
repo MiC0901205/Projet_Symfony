@@ -1,0 +1,39 @@
+
+.propos {
+    margin-right: 10px;
+}
+
+.fiche_boat {
+    margin-top: 20px;
+    width: 1000px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.infos {
+    display: flex;
+    justify-content: center;
+}
+
+.boat_main {
+    min-height: 100%;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); 
+    min-width: 100%;
+}
+
+.rent {
+    top: 50%;
+    right: 5px;
+    position: fixed;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+
+}

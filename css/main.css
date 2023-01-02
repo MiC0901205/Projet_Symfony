@@ -1,0 +1,13 @@
+body, html {
+    height: 100%;
+}
+
+.account {
+    text-decoration: none;
+
+}
+
+.infos {
+    text-align: center;
+    display: flex;
+}

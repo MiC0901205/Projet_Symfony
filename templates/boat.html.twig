@@ -1,0 +1,41 @@
+<head>
+    <link rel="stylesheet" href="./css/boat.css">
+</head>
+<div class='boat_main'>
+    <div class='fiche_boat'>
+        <div class='img'>
+            <img src="./img/{{ boat.Image }}" width = "50%" height = "50%">
+        </div>
+        <div class='data'>
+            <div>
+                <h1>{{ boat.Name }}</h1>
+                <p>{{ boat.Zipcode }}, {{ boat.City }}</p>
+                <h3>Description</h3>
+                <p>{{ boat.Description }}</p>
+            </div>
+            <div>
+                <h3>Characteristics</h3>
+                <div class='infos'>
+                    <div class='propos'> 
+                        <p>Height : {{ boat.Height }} m</p>
+                        <p>Depth : {{ boat.Depth }} m</p>
+                        <p>Weight : {{ boat.Weight }} m</p>
+                        <p>Width : {{ boat.Width }} m</p>
+                    </div>
+                    <div>
+                        <p>Peoples : {{ boat.Peoples }} max</p>
+                        <p>Power : {{ boat.Power }} KW</p>
+                        <p>Date : {{ boat.Date }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='rent'>
+    <p>Click here to rent</p>
+    <a href="./?rent&id={{ boat.id }}" class="btn btn-primary" type="submit">Rent</a>
+    </div>
+</div>
+
+
+

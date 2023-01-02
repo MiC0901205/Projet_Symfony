@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="./css/rental.css">
+</head>
+<div class="frm_loc">
+{% for loc in locs %}
+	<div class="infosLocs">
+			<div class="nameBoat">                 
+					<h2>Name</h2>
+					<p id="info">{{ loc.Name }}</p>
+			</div>
+			<div class="ImageBoat">                 
+					<h2>Image</h2>
+					<img src="./img/{{ loc.Image }}" width = "200px" height = "100px">
+			</div>
+			<div class="DateDebutLoc">                 
+					<h2>Start Date</h2>
+					<p id="info">{{ loc.DateDebutLoc }}</p>
+			</div>
+			<div class="DateFinLoc">                 
+					<h2>End Date</h2>
+					<p id="info">{{ loc.DateFinLoc }}</p>
+			</div>
+	</div>
+{% endfor %}
+</div> 

@@ -1,0 +1,30 @@
+<div class="main_boat">
+    {% if type == 'Veil' %}
+        <h1> Sailing boats </h1>
+    {% elseif type == 'Motor' %}
+        <h1> Motorboats </h1>
+    {% elseif type == 'Search' %}
+        <h1> Results of your search </h1>
+    {% else %}
+        <h1> Other Boat </h1>
+    {% endif %}
+    <div class="d-flex flex-wrap justify-content-between">
+        {% for id, boat in boats %}
+            <div class="card_boat" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ boat.name }}</h5>
+                    <img src="./img/{{ boat.img }}" width = "200px" height = "100px">
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item price">Price : {{ boat.price }} $ per days</li>
+                </ul>
+                <div class="card-body">
+                    <a href="./?boat&id={{ id }}" class="btn btn-primary" type="submit">More details</a>
+                </div>
+            </div>
+        {% endfor %}
+        {% if action %}
+            {% include 'login.html.twig' %}
+        {% endif %}
+    </div>
+</div>

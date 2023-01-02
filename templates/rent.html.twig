@@ -1,0 +1,81 @@
+<head>
+    <link rel="stylesheet" href="./css/rent.css">
+    <script src="./js/rent.js"></script>
+</head>
+<div class="frm_loc">
+    <form action="#" method="post">
+        <div class="date">
+            <div class="dateDebut">
+                <label>Start date</label>
+                <input name="startDate" id="startDate" type="date" class="dD" min="{{minimumDate}}" value="{{currentDate}}"></input>             
+            </div>
+            <div class="dateFin">
+                <label>End date</label>
+                <input name="endDate" id="endDate" type="date" class="dF" value="{{endDate}}"></input>   
+            </div>
+        </div>
+        <br>
+        <div class="msg">
+            <p>{{infos}}</p>
+        </div>
+        {% if not valid %}
+        <button type="submit" class="btn btn-primary">Validate</button>
+        {% else %}
+        <button type="submit" name="paid" class="btn btn-primary">Paid</button>
+        {% endif %}
+        <div class="info">
+            <p>| Press below to review the different characteristics of the boat |<p>
+        </div>
+        <li class="nav-item dropdown boat">
+        <a class="nav-link active dropdown-toggle" aria-current="page" role="button"
+            data-bs-toggle="dropdown" href="#">recap</a>
+            <ul class="dropdown-menu recap">
+                <li>
+                    <a>
+                        Name : {{ boat.Name }}
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a>
+                        Image :
+                        <img src="./img/{{ boat.Image }}" width = "50%" height = "50%">
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a>
+                        Width : {{ boat.Width }} m
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a>
+                        Height : {{ boat.Height }} m
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a>
+                        Depth : {{ boat.Depth }} m
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a>
+                        Weight : {{ boat.Weight }} kg
+                    </a>
+                </li>
+                <br>
+                <li>
+                    <a>
+                        Daily price : {{ boat.Price }} €
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </form>
+</div>
+
+
+

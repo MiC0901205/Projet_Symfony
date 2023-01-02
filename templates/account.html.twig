@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" href="./css/account.css">
+</head>
+<div class='account'>
+<form action="#" method="post">
+    <div class="infosNP">
+        <div class="Nom">                    
+            <label for="lastName"><b>LastName</b></label>
+            <input type="text" placeholder="Votre nom" name="lastname" value="{{ user.LastName }}">
+        </div>
+
+        <div class="Prenom" style="margin-left: 40px;">
+            <label for="firstName"><b>FirstName</b></label>
+            <input type="text" placeholder="Votre prénom" name="firstname" value="{{ user.FirstName }}">
+        </div>
+    </div>   
+
+    <label for="adress"><b>Adress</b></label>
+    <input type="text" placeholder="Votre adresse" name="adress" value="{{ user.Adress }}">    
+
+    <label for="email"><b>Email adress</b></label>
+    <input type="mail" placeholder="Adresse mail" size ="30" name="email" value="{{ user.Mail }}">
+
+    <label for="city"><b>City</b></label>
+    <input type="text" placeholder="Votre ville" name="city" value="{{ user.City }}">  
+
+    <label for="zipcode"><b>Zipcode</b></label>
+    <input type="text" maxlength="5" minlength = "5" placeholder="Votre code postal" name="zipcode" value="{{ user.Zipcode }}">  
+
+    <label for="phone"><b>Phone</b></label>
+    <input type="text" maxlength="10" minlength = "10" placeholder="Votre numéro de téléphone" name="phone" value="{{ user.Phone }}">
+
+    <button type="submit" name="valid" class="btn btn-primary">Update</button>
+
+    <a href="?logout" class="btn btn-secondary logout">Logout</a>
+
+    <a href="?rental" class="rental">See your rentals</a>
+</form>

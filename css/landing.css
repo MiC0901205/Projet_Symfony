@@ -1,0 +1,19 @@
+li.btn{
+	display: inline-block;
+	list-style-type: none;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    margin-left: -10px;
+}
+
+li.btn a{
+	color: blue;
+	text-decoration: none;
+	padding: 10px;
+}
+
+li.btn:hover a{
+	color: blue;
+	background-color: white;
+	transition: 0.3s all;
+}

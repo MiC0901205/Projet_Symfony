@@ -1,0 +1,41 @@
+{% autoescape 'html' %}
+  <!DOCTYPE html>
+  <html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+  <body>
+    <header>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="?home" class="navbar-brand d-flex align-items-center">
+            <strong> Home </strong>
+          </a>
+          <a href="?veil" class="navbar-brand d-flex align-items-center">
+            <strong> Veil </strong>
+          </a>
+          <a href="?motor" class="navbar-brand d-flex align-items-center">
+            <strong> Motor </strong>
+          </a>
+          <a href="?other" class="navbar-brand d-flex align-items-center">
+            <strong> Other </strong>
+          </a>
+          {% if not connecter %}
+          <a href="?login" class="navbar-brand d-flex align-items-center">
+            <strong> Login </strong>
+          {% else %}
+          <a href="?account" class="navbar-brand d-flex align-items-center">
+            <strong> My account </strong>
+          {% endif %}
+          </a>
+        </div>
+      </div>
+    </header>
+</body>
+
+</html>
+{% endautoescape %}
